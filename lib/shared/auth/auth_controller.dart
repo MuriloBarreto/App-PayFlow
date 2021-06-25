@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:payflow/modules/home/home_page.dart';
-import 'package:payflow/modules/login/login_page.dart';
+// import 'package:payflow/modules/home/home_page.dart';
+// import 'package:payflow/modules/login/login_page.dart';
 import 'package:payflow/shared/model/user_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -15,10 +15,11 @@ class AuthController {
       saveUser(user);
       _user = user;
      
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HOmePage()));
+     Navigator.pushReplacementNamed(context, "/home");
+      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HOmePage()));
     }else{
-     
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
+     Navigator.pushReplacementNamed(context, "/login");
+      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
     }
   }
 
