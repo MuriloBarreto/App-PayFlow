@@ -16,7 +16,9 @@ class BottomSheetWidget extends StatelessWidget {
     required this.primaryLabel,
     required this.primaryOnPressed,
     required this.secondaryLabel,
-    required this.secondaryOnPressed, required this.title,required this.subtitle,
+    required this.secondaryOnPressed,
+    required this.title,
+    required this.subtitle,
   }) : super(key: key);
 
   @override
@@ -29,32 +31,40 @@ class BottomSheetWidget extends StatelessWidget {
             color: AppColors.shape,
             child: Column(
               children: [
-                Expanded(child: Container(color: Colors.black.withOpacity(0.6)),),
+                Expanded(
+                    child: Container(
+                  color: Colors.black.withOpacity(0.6),
+                )),
                 Column(
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(40),
-                      child: Text.rich(TextSpan(text: title,
-                      style: TextStyles.buttonBoldHeading, 
-                      children: [
-                        TextSpan(text: "\n$subtitle",
-                        style: TextStyles.buttonHeading,)
-                      ]),
-                      textAlign: TextAlign.center,
+                      child: Text.rich(
+                        TextSpan(
+                            text: title,
+                            style: TextStyles.buttonBoldHeading,
+                            children: [
+                              TextSpan(
+                                text: "\n$subtitle",
+                                style: TextStyles.buttonHeading,
+                              ),
+                            ]),
+                        textAlign: TextAlign.center,
                       ),
                     ),
                     Container(
-                      height:1,
-                      color: AppColors.stroke
+                      height: 1,
+                      color: AppColors.stroke,
                     ),
-                  SetLabelButtons(
-                    enabledPrimaryColor:true,
-                    primaryLabel: primaryLabel,
-                    primaryOnPressed: primaryOnPressed,
-                    secondaryLabel: secondaryLabel,
-                    secondaryOnPressed: secondaryOnPressed,
-                  )
-                ],),
+                    SetLabelButtons(
+                        enablePrimaryColor: true,
+                        primaryLabel: primaryLabel,
+                        primaryOnPressed: primaryOnPressed,
+                        secondaryLabel: secondaryLabel,
+                        secondaryOnPressed: secondaryOnPressed),
+                    SizedBox(height: 2),
+                  ],
+                ),
               ],
             ),
           ),
