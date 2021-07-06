@@ -6,10 +6,10 @@ Um projeto flutter feito no evento nlw para fazer gerenciamento de boletos, cont
 
 ```
    - Clone esse repositório:
-   $ git clone https://github.com/rocketseat-education/nlw-06-flutter
+   $ git clone https://github.com/MuriloBarreto/App-PayFlow.git
 
    - Entre no diretório:
-   $ cd nlw-06-flutter
+   $ cd App-PayFlow
 
    - Instale as dependências:
    $ flutter pub get
